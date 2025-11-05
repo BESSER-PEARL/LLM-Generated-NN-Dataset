@@ -18,10 +18,25 @@ All networks are implemented in PyTorch.
 
 ## Generating Data
 
+Before generating data, install the required dependencies using the provided `requirements.txt` file:
+
+```bash
+pip install -r requirements.txt
+```
+
+Then create an .env file in the project’s root directory containing your OpenAI API key:
+
+```bash
+OPENAI_API_KEY=your_api_key_here
+```
+This key is used by the generation script to access the GPT-5 API.
+
+
 To generate a neural network implementation using GPT-5, run:
 ```bash
 python generate_nn.py
 ```
+
 The generated NN architecture is stored in the `dataset_nns/` directory. 
 Each `.py` file in `dataset_nns/` starts with the prompt that was used for its generation, followed by the produced PyTorch implementation.
 
