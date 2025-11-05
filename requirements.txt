@@ -1,0 +1,4 @@
+matplotlib==3.10.7
+openai==2.7.1
+python-dotenv==1.2.1
+torch==2.8.0
