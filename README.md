@@ -1,24 +1,54 @@
-# Template for BESSER-PEARL Organization Repositories
+# LLM-Generated-NN-Dataset
 
-This Github template provides a collection of base files and configuration recommendations for kick-starting a new project in the BESSER-PEARL organization.
+This repository hosts the dataset accompanying the paper **"On the Use of LLMs to Generate a Dataset of Neural Networks"**.  
+The dataset contains PyTorch-based neural network code automatically generated using GPT-5 according to specific requirements.
 
-## ⚒️ Using this template for your project
+## Overview
 
-To use this template when creating a new repository in the BESSER-PEARL GitHub organization, you have to set the `Repository template` field to `BESSER-PEARL/template`.
+The dataset was generated to support research on neural network code verification, refactoring, and migration — with a focus on improving the reliability and adaptability of network implementations.  
 
-The new repository will use this one as a template, meaning that it will contain all the files. 
-Once the new repository is created, you can edit its files to adapt them to your needs.
 
-## ☑️ Guidelines & Contributing
+Each network is generated based on a set of requirements describing:
+- **Architecture** 
+- **Task**
+- **Input type and scale**
+- **Complexity level**
 
-You will find a guided description of the steps you should follow in the [guidelines](guidelines.md) file.
+All networks are implemented in PyTorch.
 
-## 📓 Publishing the documentation to ReadTheDocs
+## Generating Data
 
-This template also provides the base files to deploy the repository documentation using [ReadTheDocs](https://docs.readthedocs.io/en/stable/index.html). In the `docs` folder you can find and edit all the Sphinx documentation sources. You can check the documentation generated from this template at the [following link](https://besser-template.readthedocs.io/en/latest/). 
+To generate a neural network implementation using GPT-5, run:
+```bash
+python generate_nn.py
+```
+Each `.py` file in `dataset_nns/` starts with the prompt that was used for its generation, followed by the produced PyTorch implementation.
 
-For more information on how to connect your repository, customize, and deploy the documentation with ReadTheDocs, you can follow [this tutorial](https://docs.readthedocs.io/en/stable/tutorial/index.html). If you do not plan to use ReadTheDocs, remove the `docs` folder and the `.readthedocs.yaml` file from your repository.
+## Validation Tool
 
-## 📚 References
+The **`verify_nn.py`** script validates the generated networks against their specification.  
+It checks compliance with specified architecture, task, input type and scale, and complexity requirements to ensure consistency and correctness.
 
-This project is an extended and adapted version (to the [BESSER-PEARL organization](https://github.com/organizations/BESSER-PEARL/)) of the [GitHub Best Practices Template](https://github.com/jlcanovas/gh-best-practices-template.git)
+To run validation:
+
+```bash
+python verify_nn.py
+```
+
+## Reproducing the Depth Analysis
+
+The repository includes the `analysis_depth.py` script, which reproduces the plot of NN depth as presented in the paper.  
+Run it with:
+
+```bash
+python analysis_depth.py
+```
+
+## Usage
+
+You can clone and explore the dataset locally:
+
+```bash
+git clone https://github.com/BESSER-PEARL/LLM-Generated-NN-Dataset.git
+cd LLM-Generated-NN-Dataset
+```
