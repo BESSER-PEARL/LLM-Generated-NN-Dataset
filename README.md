@@ -5,7 +5,7 @@ The dataset contains PyTorch-based neural network code automatically generated u
 
 ## Overview
 
-The dataset was generated to support research on neural network code verification, refactoring, and migration — with a focus on improving the reliability and adaptability of network implementations.  
+The dataset was generated to support research on neural network code verification, refactoring, and migration, with a focus on improving the reliability and adaptability of network implementations.  
 
 
 Each network is generated based on a set of requirements describing:
@@ -22,6 +22,7 @@ To generate a neural network implementation using GPT-5, run:
 ```bash
 python generate_nn.py
 ```
+The generated NN architecture is stored in the `dataset_nns/` directory. 
 Each `.py` file in `dataset_nns/` starts with the prompt that was used for its generation, followed by the produced PyTorch implementation.
 
 ## Validation Tool
