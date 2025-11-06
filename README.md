@@ -69,4 +69,13 @@ Run it with:
 python analysis_depth.py
 ```
 
+## Training and testing NNs on benchmark datasets
 
+Four NNs have been trained and evaluated on benchmark datasets.
+The scripts are available in `train_test_benchmark_nns/` repository.
+
+To train and evaluate the NN used with tabular California Housing benchmark dataset, run:
+
+```bash
+python train_test_benchmark_nns/tabular_nn_selected.py
+```
