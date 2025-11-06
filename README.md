@@ -16,6 +16,15 @@ Each network is generated based on a set of requirements describing:
 
 All networks are implemented in PyTorch.
 
+## Usage
+
+You can clone and explore the dataset locally:
+
+```bash
+git clone https://github.com/BESSER-PEARL/LLM-Generated-NN-Dataset.git
+cd LLM-Generated-NN-Dataset
+```
+
 ## Generating Data
 
 Before generating data, install the required dependencies using the provided `requirements.txt` file:
@@ -60,11 +69,4 @@ Run it with:
 python analysis_depth.py
 ```
 
-## Usage
 
-You can clone and explore the dataset locally:
-
-```bash
-git clone https://github.com/BESSER-PEARL/LLM-Generated-NN-Dataset.git
-cd LLM-Generated-NN-Dataset
-```
